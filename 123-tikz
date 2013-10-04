@@ -1,0 +1,15 @@
+\begin{dependency}
+\begin{deptext}
+Народното \& събрание \& се \& състои \& от \& 240 \& народни \& представители \& . \\
+\end{deptext}
+\depedge{2}{1}{mod}
+\depedge{4}{2}{subj}
+\depedge{4}{3}{comp}
+\depedge{4}{5}{indobj}
+\depedge{8}{6}{mod}
+\depedge{8}{7}{mod}
+\depedge{5}{8}{prepcomp}
+\depedge{4}{9}{punct}
+\end{dependency}
+
+\\

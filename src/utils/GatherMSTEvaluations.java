@@ -12,8 +12,8 @@ import java.io.OutputStreamWriter;
 public class GatherMSTEvaluations {
 
 	public static void main(String[] args) {
-		String mstEvalFile = "voting_unlabeled_avg_acc_2,3,5,7_14.txt";
-		String res = "resultEval_ulab_avg_acc.csv";
+		String mstEvalFile = "Voting_Mult_ACC_Weights_all_of14.txt";
+		String res = "Voting_Mult_ACC_Weights_all_of14.csv";
 		try {
 			BufferedReader br = new BufferedReader(new InputStreamReader(
 					new FileInputStream(new File(mstEvalFile))));
@@ -36,10 +36,10 @@ public class GatherMSTEvaluations {
 				}
 				if (line.startsWith("Tokens: ")) {
 					//bw.write(line.replaceAll("Tokens: ", ""));
-					//bw.write("\t");
+				//	bw.write("\t");
 				} else if (line.startsWith("Correct: ")) {
-					//bw.write(line.replaceAll("Correct: ", ""));
-					//bw.write("\t");	
+					bw.write(line.replaceAll("Correct: ", ""));
+					bw.write("\t");	
 				} else if (line.startsWith("Unlabeled Accuracy: ")) {
 					String ulabString = line.replaceAll("Unlabeled Accuracy: ", "");
 					double ulab = Double.parseDouble(ulabString);
@@ -50,19 +50,19 @@ public class GatherMSTEvaluations {
 					bw.write("\t");
 				} else if (line.startsWith("Unlabeled Complete Correct: ")) {
 					bw.write(line.replaceAll("Unlabeled Complete Correct: ", ""));
-				//	bw.write("\t");
-					bw.write("\n");
+					bw.write("\t");
+					//bw.write("\n");
 				} else if (line.startsWith("Labeled Accuracy: ")) {
 					String labString = line.replaceAll("Labeled Accuracy: ", "");
 					double lab = Double.parseDouble(labString);
-				//	bw.write(labString);
+					bw.write(labString);
 					if (maxLab < lab) {
 						maxLab = lab;
 					}
-				//	bw.write("\t");
+					bw.write("\t");
 				} else if (line.startsWith("Labeled Complete Correct: ")) {
-					//bw.write(line.replaceAll("Labeled Complete Correct: ", ""));
-					//bw.write("\n");
+					bw.write(line.replaceAll("Labeled Complete Correct: ", ""));
+					bw.write("\n");
 					
 				}
 			}

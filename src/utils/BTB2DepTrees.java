@@ -12,8 +12,8 @@ import java.io.OutputStreamWriter;
 
 public class BTB2DepTrees {
 
-	static String mstFile = "BTB-01-Test.mst";
-	static String dep = "BTB-01-Test-tikz";
+	static String mstFile = "123.mst";
+	static String dep = "123-tikz";
 	static String prelude = "\\begin{dependency}\n\\begin{deptext}\n";
 	static String intermezzo = "\\end{deptext}\n";
 	static String culminata = "\\end{dependency}\n\n\\\\\n";
