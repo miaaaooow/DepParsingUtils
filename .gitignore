@@ -4,3 +4,12 @@
 *.jar
 *.war
 *.ear
+
+.project
+.metadata
+.settings
+target
+
+*.txt
+*.csv
+
