@@ -6,7 +6,7 @@ import java.io.FileReader;
 import java.io.IOException;
 
 public class DataAnalyzer {
-	private final static String FILENAME = "AllParser.mst";
+	private final static String FILENAME = "resources/BTB-ALL-MST.mst";
 	private final static int CYCLE = 5;
 	private final static int POS = 1; // POS TAGS
 	private final static int REL = 2; // REL TAGS
