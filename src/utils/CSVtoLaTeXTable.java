@@ -82,6 +82,19 @@ public class CSVtoLaTeXTable {
 
 	}
 	
+	public static void makeTablesML1() {
+		String [] b = {"acc", "avg", "eql"};
+
+			for (String aae : b) {
+				String input = "resources/tab_all_" + aae + ".csv";
+				String output = "resources/tab_all_" + aae + ".tex";
+				transferToLaTeXTable(input, output, "tab:lab_ML1_" + aae, 
+						"Най-добрите 15 комбинации, спрямо точността без етикети, за" +
+						" \\textbf{МТ=" + aae + "}" , true);
+			}
+
+	}
+	
 	public static void makeTablesLabeledEdges() {
 		String [] a = {"max", "min", "mult"};
 		String [] b = {"acc", "avg", "eql"};
@@ -106,12 +119,14 @@ public class CSVtoLaTeXTable {
 					"Най-добри комбинации за метрика \\textbf{"+ name + "}", true);
 		}
 	}
+	public static void malts() {
+		String input = "resources/malts.csv";
+		String output = "resources/test.tex";
+		transferToLaTeXTable(input, output, "tab:malts",
+				"MALT синтактични анализатори с параметрите им", true);
+	}
+	
 	public static void main(String[] args) {
-		String input = "resources/__fun.csv";
-			String output = "resources/test.tex";
-			transferToLaTeXTable(input, output, "tab:mainpostags",
-					"Основни категории части на речта", true);
-		
-
+		makeTablesML1();
 	}
 }

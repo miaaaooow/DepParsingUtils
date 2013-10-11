@@ -1,20 +1,32 @@
 \begin{table}[!htb] 
-  \begin{tabular}{|l|l|l|l|}
+  \begin{tabular}{|l|l|l|l|l|l|l|l|}
 \hline 
 \hline 
-N &	������������� ��� &	V &	 ������\\ 
+Parser N° &	 &	Malt01 &	Malt02 &	Malt03 &	Malt04 &	Malt05 &	Malt06\\ 
 \hline 
-A &	������������ ��� &	C &	 ����\\ 
+Model &	 &	Covington &	Covington &	Stack Eager &	Stack Eager &	Stack Lazy &	Stack Lazy\\ 
 \hline 
-� &	������� ��� ��� ������������ �� ������� ��� &	R &	 �������\\ 
+Learning method &	 &	LIBSVM &	LIBLINEAR &	LIBSVM &	LIBLINEAR &	LIBSVM &	LIBLINEAR\\ 
 \hline 
-� &	���������� ��� &	� &	 �������\\ 
+Parsing Algorithm &	 &	non-projective graphs &	non-projective graphs &	projective default model &	projective default model &	projective default model &	projective default model\\ 
 \hline 
-� &	����������� &	I &	 ���������� \\ 
+Configuration of the kernel function &	SVM type &	C-SVC &	one-class SVM &	C-SVC &	nu-SVR &	C-SVC &	nu-SVR\\ 
 \hline 
-D &	 �������\\ 
+ &	kernel type &	polynomial &	- &	polynomial &	- &	linear &	-\\ 
+\hline 
+ &	degree &	2 &	- &	2 &	- &	- &	-\\ 
+\hline 
+ &	gamma &	0.6 &	- &	0.6 &	- &	- &	-\\ 
+\hline 
+ &	cost &	1.0 &	8 &	1.0 &	8 &	0.3 &	3\\ 
+\hline 
+ &	coef0 &	0 &	- &	0 &	- &	- &	-\\ 
+\hline 
+ &	epsilon &	1.0 &	0.1 &	1.0 &	0.1 &	0.1 &	0.01\\ 
+\hline 
+ &	nu &	0.5 &	- &	0.5 &	- &	- &	-\\ 
 \hline 
  \end{tabular}
- \label{tab:mainpostags}
-\caption{Основни категории части на речта}
+ \label{tab:malts}
+\caption{MALT синтактични анализатори с параметрите им}
  \end{table}
